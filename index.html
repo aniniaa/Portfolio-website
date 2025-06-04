@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Aniba Gazette</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+        
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f7f1;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .newspaper-name {
+            font-family: 'Old English Text MT', 'Playfair Display', 'Times New Roman', serif;
+            font-size: 60px;
+            font-weight: 900;
+            margin: 0;
+            line-height: 1;
+        }
+        
+        .date-line {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            margin: 10px 0;
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+            padding: 5px 0;
+        }
+        
+        .main-content {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+            align-items: flex-start;
+        }
+        
+        .biography {
+            flex: 2;
+        }
+        
+        .photo-section {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .profile-photo {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            border: 1px solid #000;
+            margin-bottom: 10px;
+        }
+        
+        .photo-caption {
+            font-size: 12px;
+            font-style: italic;
+            color: #666;
+        }
+        
+        .bio-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #000;
+            padding-bottom: 5px;
+        }
+        
+        .bio-content {
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        
+        .navigation {
+            border-top: 2px solid #000;
+            border-bottom: 2px solid #000;
+            padding: 20px 0;
+            margin: 40px 0;
+        }
+        
+        .nav-title {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .nav-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .nav-button {
+            background-color: #f9f8f4;
+            border: 2px solid #000;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .nav-button:hover {
+            background-color: #e6e3d8;
+        }
+        
+        .nav-button-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .nav-button-description {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .footer-note {
+            text-align: center;
+            font-style: italic;
+            font-size: 14px;
+            color: #666;
+            margin-top: 30px;
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+        }
+    </style>
+    <script>
+        // Update date to current date
+        document.addEventListener('DOMContentLoaded', function() {
+            const dateElement = document.getElementById('current-date');
+            const now = new Date();
+            const options = { 
+                year: 'numeric', 
+                month: 'long', 
+                day: '2-digit'
+            };
+            const formattedDate = now.toLocaleDateString('en-US', options).toUpperCase();
+            dateElement.textContent = formattedDate;
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="newspaper-name">THE ANIBA GAZETTE</h1>
+            <div class="date-line">
+                <span>Est. 2025 "From Stars to Statistics"</span>
+                <span id="current-date">JUNE 04, 2025</span>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="biography">
+                <h2 class="bio-title">PROFESSIONAL BIOGRAPHY</h2>
+                <div class="bio-content">
+                    <p>I'm currently pursuing an MSc in Data Science and AI at the University of Liverpool, where I'm completing my thesis on stock prediction and trading models. My academic foundation includes ACCA qualification with AA prizewinner status, where I developed expertise in financial analysis and auditing for international clients with multi-million dollar portfolios. This combination of rigorous financial training and cutting-edge AI research has shaped my approach to data-driven decision making across diverse domains.</p>
+                    
+                    <p>Beyond technical expertise, I'm passionate about creating a <strong>"symbiotic techno-ecological future"</strong> and advocate for <strong>"ecotopia"</strong>—a vision where technology serves both human prosperity and environmental sustainability. This website showcases my projects spanning machine learning, financial modeling, and data visualization, along with articles exploring the intersection of technology, ecology, and society. I believe data science can be a powerful tool for building systems that are both economically resilient and environmentally regenerative.</p>
+                </div>
+            </div>
+            
+            <div class="photo-section">
+                <img src="/api/placeholder/250/300" alt="Aniya Bagheri" class="profile-photo">
+                <div class="photo-caption">Aniya Bagheri<br>Editor-in-Chief & Data Scientist</div>
+            </div>
+        </div>
+        
+        <div class="navigation">
+            <h3 class="nav-title">EXPLORE SECTIONS</h3>
+            <div class="nav-buttons">
+                <div class="nav-button">
+                    <div class="nav-button-title">PROJECTS</div>
+                    <div class="nav-button-description">Academic research, side projects, and practical applications</div>
+                </div>
+                
+                <div class="nav-button">
+                    <div class="nav-button-title">FINANCE</div>
+                    <div class="nav-button-description">ACCA expertise, auditing experience, and financial modeling</div>
+                </div>
+                
+                <div class="nav-button">
+                    <div class="nav-button-title">MACHINE LEARNING</div>
+                    <div class="nav-button-description">GNN research, bio-inspired algorithms, and thesis work</div>
+                </div>
+                
+                <div class="nav-button">
+                    <div class="nav-button-title">DATA SCIENCE</div>
+                    <div class="nav-button-description">Analytics, visualization, and computational intelligence</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-note">
+            Click on any section above to explore detailed portfolio content and project examples.
+        </div>
+    </div>
+</body>
+</html>
